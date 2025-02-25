@@ -72,8 +72,8 @@ nano authorized_keys
 ```
 multipass list
 ```
+<img width="563" alt="Mutipass-list" src="https://github.com/user-attachments/assets/a7b3fe57-9ce0-4335-b148-113ed7cb91ca" />
 
-![image](https://user-images.githubusercontent.com/10358317/201084356-c34f3629-7e86-4e15-9cad-3361b5a49f34.png)
 
 - SSH from controlplane to node1
 
@@ -83,7 +83,17 @@ or
 ssh <username>@<IP>
 ```
 
-![image](https://user-images.githubusercontent.com/10358317/201084577-1028dc59-be04-4cb4-982b-f3dca1ea6251.png)
+<img width="554" alt="Mutipass-controlNode-to-Nodes" src="https://github.com/user-attachments/assets/b448013a-1ce4-452c-8553-62f6275de597" />
 
 ### References
 - https://techsparx.com/linux/multipass/enable-ssh.html
+
+
+### Troubleshoot
+
+- If you found error/mistake during configuration, you might need to delete or recreate the instance with below command:
+```
+multipass delete controlnode
+multipass purge
+multipass launch --name controlnode
+```
